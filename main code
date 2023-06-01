@@ -1,0 +1,79 @@
+import random
+
+class pet():
+
+   def __init__ (self, colour, animal, sound):
+    self.colour = k1
+    self.animal = a1
+    self.sound = s1
+
+   def tomadachi(self):
+    print('colour:', self.colour,'/','animal:', self.animal,'/' ,'sound:', self.sound)
+
+class characteristics():
+
+ def __init__ (self, hunger, personality, tricks, intelligence):
+    self.hunger = h1
+    self.personality = p1
+    self.tricks = t1
+    self.intelligence = i1
+ def hungry_or_not(self):
+    print('your pets hunger level is',self.hunger)
+    if self.hunger < 50:
+       feed = input("your pet needs to be fed, press W to feed your animal: ")
+       if feed == 'w' or 'W':
+          self.hunger = h1 + 50
+          print("Nice! you've fed your pet.")
+          print("your tomadachi's hunger level is now", self.hunger)
+       else:
+        print('invalid input')
+        exit()
+    elif self.hunger > 50:
+        print(name,"dosen't seem too hungry")
+        foodtime = input("would you still like to feed your pet? (Y/N)")
+        if foodtime == 'y' or 'Y':
+           print('Great! Your pet has a big appetite anyway')
+           feed2 = input("press W to feed")
+           if feed2 == 'w' or 'W':
+            self.hunger = h1 + 50
+            if self.hunger > 100:
+              self.hunger = 100
+              print('your pet has now been fed and is at',self.hunger)
+        elif foodtime == 'N' or 'n':
+         print('Ok...you may be starving your pet >_<')
+
+
+hunger1 = random.randint(1,100)
+h1 = (hunger1)
+
+personality1  = ("happy", "cheerful", "sad", "gloomy", "pessemist", "opptimist", "bored", "open", "trusting", "closed", "untrusting", "extroverted", "introverted")
+p1 = random.choice(personality1)
+
+tricks1 = ('rolie-pollie','backflip','handstand','press-up')
+t1 = random.choice(tricks1)
+
+intelligence1 = ('Dumb','smart','highly intellectual')
+i1 = random.choice(intelligence1)
+
+pick = input('press 1 to choose a random tomadachi')
+
+
+foo = ('red', 'orange', 'yellow', 'green', 'blue')
+k1 = random.choice(foo)
+ani = ('wolf','dog','cat','turtle','mouse','snake')
+a1 = random.choice(ani)
+sou = ('squeel','roar','hiss','oink','meow','neigh','cluck')
+s1 = random.choice(sou)
+
+tomadachi1_appearance = pet(k1,a1,s1)
+name = ('now give your pet a name')
+
+if pick == '1':
+ tomadachi1_appearance.tomadachi()
+
+print("you've now selected your very own tomadachi")
+print("lets check if",name,"is hungry")
+letscheck = input('press enter to check your pets hunger level')
+if letscheck == '':
+ tomadachi_char = characteristics(h1,p1,t1,i1)
+ tomadachi_char.hungry_or_not()
